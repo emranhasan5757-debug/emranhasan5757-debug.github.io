@@ -1,12 +1,3663 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
+<meta property="og:title" content="SEO & Ads Friendly Header with Theme Toggle">
+<meta property="og:description" content="Lightweight responsive header with day/night mode, built for speed and SEO.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yourdomain.com/preview.jpg">
+<meta property="og:url" content="https://yourdomain.com">
+<meta charset="UTF-8">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEO & Ads Friendly Header with Theme Toggle">
+<meta name="twitter:description" content="Lightweight responsive header with day/night mode.">
+<meta name="twitter:image" content="https://yourdomain.com/preview.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+	  <title>www.loveormoon.com</title>
+    <style>
+/* 
+ * PERFORMANCE-OPTIMIZED APPLE-STYLE CSS
+ * Enhanced for Core Web Vitals and layout stability (CLS)
+ */
+
+/* Reset & Base Styles - predictable box model to prevent layout shifts */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Prevent layout shifts from text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    /* Core variables with fallbacks to prevent layout shifts */
+    --transition-speed: 0.3s;
+    --bg: #ffffff; /* Fallback */
+    --text: #1d1d1f; /* Apple-style text color */
+    /* System font stack - normalized across devices */
+    --system-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* Apple-inspired spacing system */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+  --glow: #ff2d2d; /* Vibrant glowing red */
+  --hotpink: #c21807; /* Deep, realistic heart red */
+      --bg-light: #f9f9f9;
+      --bg-dark: #0d0d0d;
+      --moon-color: #ffc0cb; /* pale pink moon */
+      --moon-glow: #ffb6c1;
+    /* Consistent header height to prevent layout shifts */
+    --header-height: 60px;
+    /* Content containment for consistent layout */
+    --content-max-width: 1200px;
+    --content-padding: clamp(16px, 5vw, 48px);
+	    /* Clean, organized theme variables */
+    --color-primary: #1a73e8;
+    --color-background: #ffffff;
+    --color-text: #212529;
+}
+
+/* Optimized body styling */
+body {
+    /* Base styles from your code */
+    background: var(--bg, #ffffff);
+    color: var(--text, #1d1d1f);
+    font-family: var(--system-font);
+    padding-top: var(--header-height, 60px);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    /* Layout shift prevention */
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    border-radius: 10px;
+	border: 1px solid var(--border-color);
+    /* Optimized transitions for performance */
+    transition: 
+        background-color var(--transition-speed, 0.3s) cubic-bezier(0.28, 0.11, 0.32, 1), 
+        color var(--transition-speed, 0.3s) cubic-bezier(0.28, 0.11, 0.32, 1);
+    
+    /* Force smooth scrolling for better experience */
+    scroll-behavior: smooth;
+    
+    /* Font loading optimization */
+    font-display: swap;
+}
+
+/* Apple Official Font Style - improved */
+.apple-text {
+    font-family: var(--system-font);
+    font-size: 18px;
+    line-height: 1.47059; /* Apple's exact line-height */
+    letter-spacing: -0.022em; /* Apple's text tracking */
+    padding: var(--space-md, 10px) 0;
+    
+    /* Prevent text layout shifts */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    
+    /* Lock in text width to prevent layout shifts */
+    max-width: 100%;
+}
+
+/* Apple-style headings with consistent hierarchy */
+h1, .h1 {
+    font-family: var(--system-font);
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+	text-align: center;
+    margin-bottom: var(--space-lg, 24px);
+}
+
+h2, .h2 {
+    font-family: var(--system-font);
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    margin-bottom: var(--space-md, 16px);
+}
+
+h3, .h3 {
+    font-family: var(--system-font);
+    font-size: clamp(20px, 3vw, 32px);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+    margin-bottom: var(--space-md, 16px);
+}
+
+/* Content container with Apple-style width constraints */
+.container {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+}
+
+
+/* Typography scale preventing layout shifts */
+.text-sm {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.text-base {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.text-lg {
+    font-size: 18px;
+    line-height: 1.47059;
+}
+
+.text-xl {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Fade in for content to prevent perceived layout shifts */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s cubic-bezier(0.28, 0.11, 0.32, 1) forwards;
+    will-change: opacity;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Optimize animations with hardware acceleration */
+.hardware-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Prevent layout shifts for images that need to maintain aspect ratio */
+
+
+/* Enhanced Theme Tokens */
+/* Light theme variables */
+body.light {
+  --bg: #ffffff;
+  --text: #212529;
+  --header-bg: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --text-color: #343a40;
+  --active-tab: #1a73e8;
+  --tab-hover: #e9ecef;
+  --button-bg: #1a73e8;
+  --button-text: #ffffff;
+  --accent-color: #34a853;
+  --danger-color: #ea4335;
+  --warning-color: #fbbc05;
+}
+
+/* Dark theme variables */
+body.dark {
+  --bg: #121212;
+  --text: #e1e1e1;
+  --header-bg: #1e1e1e;
+  --card-bg: #2d2d2d;
+  --border-color: #444;
+  --text-color: #e1e1e1;
+  --active-tab: #8ab4f8;
+  --tab-hover: #3d3d3d;
+  --button-bg: #8ab4f8;
+  --button-text: #202124;
+  --accent-color: #81c995;
+  --danger-color: #f28b82;
+  --warning-color: #fde293;
+}
+
+/* Gradient Text */
+/* Optimized gradient text animation for better performance and layout stability */
+#changingText {
+    /* Define dimensions to prevent layout shifts */
+    width: 100%;
+    min-height: 1.2em; /* Prevent height collapse during font loading */
+    margin: 0;
+    padding: 0.5em 0;
+	
+    /* Optimize text styling */
+    font-family: 'Kite One', system-ui, sans-serif; /* Add system fallback */
+    font-style: italic;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
+    /* Ensure text doesn't overflow */
+    white-space: nowrap;
+    overflow: hidden;
+	
+    /* Gradient for performance */
+    background: linear-gradient(to right, #7fffd4 0%, #76eec6 15%, #8a2be2 35%, #00ced1 55%, #ff69b4 75%, #adff2f 100%);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+
+    /* Animation for gradient */
+    will-change: background-position; /* Hardware acceleration hint */
+    animation: gradientAnimation 10s ease infinite;
+    
+    /* Prevent layout shifts during load */
+    contain: layout paint style;
+
+    /* Ensure text auto fits by adjusting the width but keep default font size */
+    font-size: inherit;
+    transform: scaleX(1) scaleY(1);
+}
+
+/* Optimized animation with reduced GPU usage */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Font loading optimization to prevent layout shifts */
+@font-face {
+    font-family: 'Kite One';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap; /* Prevent layout shift during font loading */
+    src: local('Kite One'), url('/path/to/kite-one.woff2') format('woff2');
+}
+
+/* Responsive adjustments with consistent sizing to prevent shifts */
+@media (max-width: 768px) {
+    #changingText {
+        padding: 0.4em 0;
+        /* Maintain height to prevent layout shift */
+        min-height: 1.2em;
+    }
+}
+
+/* For smaller screens, reduce font size */
+@media screen and (max-width: 600px) {
+    #changingText {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #changingText {
+        padding: 0.3em 0;
+        /* Maintain height to prevent layout shift */
+        min-height: 1.2em;
+    }
+}
+
+
+/* Header Design */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 51px; /* Fixed height to prevent layout shifts */
+    background: var(--header-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+	border: 1px solid var(--border-color);
+    transition: background var(--transition-speed);
+    will-change: transform; /* Performance optimization */
+}
+
+/* More flexible responsive design */
+.responsive-element {
+    width: clamp(200px, 50%, 600px);
+    padding: max(1rem, 2vw);
+}
+
+/* Navigation Container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0; /* Prevent layout shifts */
+    padding: 0; /* Prevent layout shifts */
+}
+.nav-item {
+    position: relative;
+    padding: 15px 12px;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color var(--transition-speed);
+}
+.nav-link:hover {
+    color: var(--active-tab);
+}
+/* Submenu */
+.submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    background: var(--header-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed), visibility var(--transition-speed);
+    list-style: none;
+    margin: 0; /* Prevent layout shifts */
+    padding: 0; /* Prevent layout shifts */
+    will-change: opacity; /* Performance optimization */
+}
+.nav-item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+.submenu-item {
+    border-bottom: 1px solid var(--border-color);
+}
+.submenu-link {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    transition: background var(--transition-speed), color var(--transition-speed);
+}
+.submenu-link:hover {
+    background: var(--tab-hover);
+    color: var(--active-tab);
+}
+/* Controls (Theme, Menu) */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: var(--text-color);
+    transition: color var(--transition-speed);
+    /* CLS optimizations */
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    contain: layout paint style; /* Containment for performance */
+    transform: translateZ(0); /* Force GPU acceleration */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: transform var(--transition-speed), color var(--transition-speed);
+    will-change: transform; /* Performance optimization */
+    /* CLS optimizations */
+    width: 50px;
+    height: 50px;
+    contain: layout paint style; /* Containment for performance */
+    transform: translateZ(0); /* Initial transform to maintain GPU layer */
+}
+
+/* Menu icon transform for close animation */
+.menu-toggle.active {
+    transform: rotate(90deg) translateZ(0); /* Keep GPU acceleration during animation */
+}
+
+/* Preload animation states to avoid CLS during first interaction */
+@media (prefers-reduced-motion: no-preference) {
+    .menu-toggle {
+        /* Force-create paint layer before animation starts */
+        backface-visibility: hidden;
+    }
+}
+
+/* Reserve space in DOM flow even when hidden */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 60px);
+        background: var(--header-bg);
+        flex-direction: column;
+        transition: left var(--transition-speed);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        will-change: left; /* Performance optimization */
+    }
+    .main-nav.active {
+        left: 0;
+    }
+    .nav-item {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-speed);
+        will-change: max-height; /* Performance optimization */
+    }
+    .nav-item:hover .submenu {
+        max-height: 500px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* ✅ CSS: Minimalist, Responsive, Blazing Fast */
+/* 
+ * Tabs Component - Performance Optimized
+ * Original design and functionality preserved
+ * CLS improvements only
+ */
+
+.tabs-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  overflow: hidden;
+  background: var(--bg);
+  /* Performance optimization - doesn't change appearance */
+  contain: content;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+  /* Performance optimization - doesn't change appearance */
+  position: relative;
+  z-index: 1;
+}
+
+.tab {
+  flex: 1 1 auto;
+  min-width: 100px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-color);
+  cursor: pointer;
+  white-space: nowrap;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.2s ease-in-out;
+  /* Performance optimization - reduces paint */
+  will-change: background-color, color;
+}
+
+.tab:hover,
+.tab:focus {
+  background: var(--tab-hover);
+  color: var(--active-tab);
+}
+
+.tab.active {
+  background: var(--bg);
+  color: var(--active-tab);
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--bg);
+  z-index: 2;
+}
+
+#tabMessages p {
+  display: none;
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  /* Performance optimization - reserves space to prevent layout shifts */
+  min-height: 100px; /* Adjust based on your actual content */
+}
+
+#tabMessages p.active {
+  display: block;
+}
+
+        /* Main content area */
+/* 
+ * Content Area & Grid Layout - Performance Optimized
+ * Original design and responsive behavior preserved
+ * CLS optimizations and paint performance improvements
+ */
+
+.content-area {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-speed);
+    /* Performance optimization - helps browser optimize rendering */
+    contain: content;
+    /* Pre-allocate space to prevent layout shifts */
+    min-height: 200px; /* Adjust based on your actual content */
+}
+
+/* Grid layout for cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 24px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* Commented transition already disabled - good choice for performance */
+    /* transition: all var(--transition-speed); */ /* Might be costly with many cards */
+    
+    /* Performance optimization - helps with paint containment */
+    contain: layout style;
+    /* Optimize GPU rendering for smoother scrolling */
+    will-change: transform;
+}
+
+/* Responsive grid breakpoints */
+@media (max-width: 1024px) {
+    .grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+        gap: 16px;
+    }
+    .content-area {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* 
+ * Card Component - Performance Optimized
+ * Original design and animations preserved
+ * CLS improvements and paint performance enhancements
+ */
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  min-height: 180px; /* Adjust based on your actual content */
+  contain: layout paint style; /* Enhanced containment for performance */
+  will-change: transform;
+  z-index: 1;
+}
+
+.card:hover {
+  border-color: var(--active-tab);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-radius: 8px;
+  border-image-source: conic-gradient(
+    from var(--angle, 0deg) at 50% 50%,
+    transparent 0%,
+    transparent 50%,
+    #fff845 50%,
+    #1cc98c,
+    #24cbde,
+    #57a9f7,
+    #bd52f9,
+    #ebb347 100%
+  );
+  border-image-slice: 1;
+  animation: rainbowRotate 4s linear infinite;
+  
+
+
+}
+
+/* Define the animation keyframes for 'rainbowRotate' */
+@keyframes rainbowRotate {
+  0% {
+    /* Start with the gradient angle at 0 degrees */
+    --angle: 0deg;
+  }
+  100% {
+    /* End with the gradient angle at 360 degrees, completing a full rotation */
+    --angle: 360deg;
+  }
+}
+
+/* Card metadata */
+.meta {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+/* Card badges and buttons */
+.free-text {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    /* Optimize paint layer */
+    z-index: 2;
+}
+
+/* Base style for all tabs */
+[data-tab="1"] .free-text { background: rgba(0, 123, 167, 0.9); }   /* Stronger Sky Blue */
+[data-tab="2"] .free-text { background: rgba(34, 139, 34, 0.9); } /* Forest Green */
+[data-tab="3"] .free-text { background: rgba(204, 51, 0, 0.9); } /* Deep Burnt Orange */
+[data-tab="4"] .free-text { background: rgba(72, 61, 139, 0.9); } /* Dark Slate Blue */
+[data-tab="5"] .free-text { background: rgba(0, 128, 128, 0.9); } /* Teal */
+[data-tab="6"] .free-text { background: rgba(115, 48, 152, 0.9); } /* Amethyst Purple */
+[data-tab="7"] .free-text { background: rgba(54, 100, 189, 0.9); } /* Deepened Cornflower Blue */
+[data-tab="8"] .free-text { background: rgba(39, 118, 108, 0.9); } /* Dark Teal */
+[data-tab="9"] .free-text { background: rgba(32, 32, 32, 0.9); } /* Charcoal Gray */
+[data-tab="10"] .free-text { background: rgba(0, 123, 255, 0.9); } /* Sky Blue */
+
+
+.card-number {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.top-meta {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 10px;
+    /* Optimize paint layer */
+    z-index: 2;
+}
+
+.top-meta button {
+    all: unset;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: opacity 0.2s, color 0.2s;
+    /* Optimize touch target size */
+    min-height: 24px;
+    min-width: 24px;
+}
+
+.top-meta button:hover {
+    opacity: 1;
+    color: var(--danger-color);
+}
+
+.top-meta button[aria-pressed="true"] {
+    color: var(--danger-color);
+    opacity: 1;
+}
+
+/* Card title with gradient underline animation */
+.title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--active-tab);
+    margin: 40px 0 5px 0;
+    display: inline-block; /* Changed to inline-block to match width of text */
+    line-height: 1.4;
+    position: relative; /* Needed for the absolute positioning of pseudo-element */
+    cursor: pointer; /* Optional: shows it's interactive */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.title::after {
+    content: ''; /* Empty element for underline */
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Position it below text */
+    height: 1px; /* Thickness of underline */
+    width: 0; /* Hidden by default */
+    background: linear-gradient(45deg, #0f62fe, #24a148); /* Gradient background */
+    transition: width 0.3s ease; /* Animation effect */
+    /* Performance optimization for animation */
+    will-change: width;
+    transform: translateZ(0);
+}
+
+.title:hover {
+    color: green; /* Optional: change text color on hover */
+}
+
+.title:hover::after {
+    width: 100%;
+	/* Fully visible on hover */
+}
+
+/* Added specific style for Paid AI tab cards 
+[data-tab="2"] .title:hover {
+    color: gray; /* Optional: change text color on hover 
+}
+*/
+
+.info-list {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.info-list strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Learn more link */
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--button-bg);
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+
+.learn-more-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transition: transform 0.2s;
+    transform: scaleX(0);
+    transform-origin: right;
+    /* Performance optimization for animation */
+    will-change: transform;
+}
+
+.learn-more-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Share button styles */
+.share-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 5px 13px;
+    border-radius: 10px;
+    background: rgba(26, 115, 232, 0.1);
+    color: var(--button-bg);
+    border: 1px solid rgba(26, 115, 232, 0.3);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+    /* Performance optimization for animation */
+    will-change: transform;
+    /* Reserve space to prevent layout shifts when button isn't rendered */
+    height: 28px;
+}
+
+.share-btn:hover, .share-btn:focus {
+    background: rgba(26, 115, 232, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #174ea6; /* Darker blue on hover */
+    outline: none;
+}
+
+.share-btn:disabled {
+    cursor: default;
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Note: There appears to be a duplicate .pagination and .page-button ruleset in the original.
+   I've combined them and optimized for performance while preserving all styles. */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem 0; /* Add some padding */
+    /* Performance optimization - helps browser optimize rendering */
+    contain: layout;
+    /* Reserve vertical space to prevent layout shifts */
+    min-height: 60px; /* Adjust based on your actual pagination height */
+}
+
+.page-button {
+    padding: 0.4rem 0.8rem;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    min-width: 40px;
+    min-height: 36px; /* Explicitly set height to prevent layout shifts */
+    text-align: center;
+    /* Optimize transitions by specifying properties */
+    transition: background-color 0.2s ease-in-out, 
+                color 0.2s ease-in-out,
+                border-color 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
+    /* Performance optimization for hover state changes */
+    will-change: transform;
+    /* Promote to own layer for better rendering */
+    transform: translateZ(0);
+    /* Ensure sufficient touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-button.active,
+.page-button[aria-current="page"] /* Style for current page */
+{
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-color: var(--button-bg);
+    cursor: default;
+}
+
+.page-button:hover:not(.active):not([aria-current="page"]), 
+.page-button:focus:not(.active):not([aria-current="page"]) {
+    background-color: var(--tab-hover);
+    color: var(--active-tab);
+    outline: none;
+    border-color: var(--active-tab);
+}
+
+.page-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    /* Don't apply transformations to disabled buttons */
+    transform: none;
+}
+
+.nav-button {
+    /* Inherits .page-button styles */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.nav-button:hover:not(:disabled), 
+.nav-button:focus:not(:disabled) {
+    background: #174ea6; /* Darker blue for nav buttons */
+    color: var(--button-text);
+    transform: translateY(-1px);
+    border-color: #174ea6;
+}
+
+.pagination-ellipsis {
+    padding: 0.4rem 0.5rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+    will-change: opacity; /* Prepares for transition, reducing layout shifts */
+    /* Fixed dimensions to prevent layout shifts */
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-ellipsis:hover {
+    opacity: 1; /* Full opacity on hover for interactivity */
+}
+
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .page-button {
+        padding: 0.5rem 0.8rem;
+        min-width: 36px;
+        font-size: 0.9rem;
+    }
+    .nav-button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* for eggs touch */
+
+.egg-hook {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 2px dashed var(--border-color);
+  padding: 16px 24px;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  animation: floatFadeIn 0.6s ease forwards;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Egg Container */
+.egg-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Egg Style */
+.egg {
+  width: 80px;
+  height: 110px;
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset -6px -6px 12px rgba(255,255,255,0.5),
+              inset 4px 4px 10px rgba(0,0,0,0.1),
+              0 8px 14px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.egg:hover {
+  transform: translateY(-4px);
+}
+
+.egg::before {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 28%;
+  width: 18px;
+  height: 18px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  filter: blur(1px);
+  transform: rotate(-15deg);
+}
+
+/* Pop animation */
+.pop {
+  animation: pop 0.4s forwards ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@keyframes floatFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Egg Colors – Realistic */
+.egg1  { background: #fffdf6; }     /* White */
+.egg2  { background: #e8d9b0; }     /* Beige */
+.egg3  { background: #f2e6cf; }     /* Cream */
+.egg4  { background: #c0a76d; }     /* Light tan */
+.egg5  { background: #d3b58f; }     /* Buff */
+.egg6  { background: #b88953; }     /* Brown */
+.egg7  { background: #6b4c3b; }     /* Chocolate brown */
+.egg8  { background: #d5e6e0; }     /* Pale green */
+.egg9  { background: #c5dae7; }     /* Blue */
+.egg10 { background: #e7e2da; }     /* Pink-tinted */
+
+/* Dark mode override (if needed for egg visibility) */
+body.dark .egg {
+  box-shadow: inset -6px -6px 12px rgba(255,255,255,0.03),
+              inset 4px 4px 10px rgba(0,0,0,0.6),
+              0 8px 14px rgba(0,0,0,0.6);
+}
+
+/* Floating wobble animation on load */
+@keyframes wobble {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-2px) rotate(-1deg); }
+  50%  { transform: translateY(0px) rotate(1.5deg); }
+  75%  { transform: translateY(-1px) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.egg {
+  animation: wobble 4.5s ease-in-out infinite;
+}
+
+/* Bounce on hover */
+.egg:hover {
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  60%  { transform: translateY(4px); }
+  100% { transform: translateY(0); }
+}
+
+/* Ultra-Minimal Social Bar (No Background) */
+.ads-promo {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hook Banner Style */
+.ads-hook {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem 1.5rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Social Bar Styling */
+.social-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+/* Responsive Buttons */
+.social-bar a {
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* Dark Mode */
+body.dark .ads-hook {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .social-bar a {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hover effect */
+.social-bar a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.dark .social-bar a:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+  .ads-hook {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .social-bar {
+    gap: 0.6rem;
+  }
+
+  .social-bar a {
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: subtle background pulse on hover (ads-feel) */
+.social-bar a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+/* Connect Text inside Border */
+.connect-text {
+  font-size: 1.1rem; /* Slightly larger for better readability */
+  color: var(--text-color); /* Text color based on theme */
+  margin-top: 0.5rem;
+  opacity: 0.9; /* Slightly increased opacity for readability */
+  font-weight: 500; /* Set font weight to normal for readability */
+  line-height: 1.6; /* Line-height for better text spacing */
+  transition: color 0.3s ease, opacity 0.3s ease;
+  letter-spacing: 0.5px; /* Slight spacing for better clarity */
+  padding: 1rem 1.5rem; /* Padding inside the border */
+  border: 2px dashed #808080; /* Gray dashed border */
+  border-radius: 10px; /* Rounded corners for a more refined look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: var(--card-bg); /* Subtle background color */
+  animation: fadeInUp 0.6s ease-out forwards; /* Animation for a smooth entrance */
+}
+
+/* Add Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* this for app icon css section */
+.store-buttons-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  width: fit-content;
+  max-width: 90%;
+}
+
+/* Force ALL icons (App Store, Google Play, Web) to be the same */
+.store-button img {
+  height: 60px !important; /* Adjust size as needed */
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border-radius: 12px;
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.store-button:hover {
+  transform: scale(1.02);
+}
+
+/* ✅ Badge wrapper: forces consistent sizing */
+.badge-wrapper {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-wrapper img {
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ✅ Web App special case */
+.web-badge {
+  gap: 0.5rem;
+  padding: 0 0.75rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+.web-badge img {
+  height: 24px;
+  width: 24px;
+}
+.web-badge span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+  line-height: 1;
+}
+
+/* Theme-tweaks */
+body.light .store-buttons-bar {
+  background-color: rgba(240, 240, 240, 0.08);
+}
+body.dark .store-buttons-bar {
+  background-color: rgba(18, 18, 18, 0.08);
+}
+
+/* Minimal Compact Footer Design */
+.footer {
+  padding: 0.6rem 0.5rem; /* Smaller padding */
+  border: 2px dashed #1A1A1A; /* Gray dashed border */
+  border-radius: 6px; /* Slightly smaller border radius */
+  background-color: var(--card-bg); /* Background color */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.8rem; /* Smaller font size */
+  color: var(--text-color);
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem; /* Reduced space between links */
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.3rem 0.6rem; /* Sleek padding */
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: var(--active-tab);
+    transform: translateY(-1px); /* Subtle movement for interactivity */
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--active-tab);
+    transition: all 0.2s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.footer-links a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Love Message */
+.love-msg {
+    margin: 1rem 0; /* Slimmer spacing for compact design */
+    font-size: 0.9rem; /* Adjusted font size */
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem; /* Reduced spacing for minimalism */
+}
+
+.love-msg span {
+    color: var(--danger-color);
+    animation: pulse 1.2s infinite; /* Smooth animation for visual interest */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Copyright Section */
+.copyright {
+  font-size: 0.7rem; /* Smallest text size */
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+/* Light/Dark Mode Adjustments */
+body.dark .footer, body.dark .connect-text {
+  background-color: #333333;
+  border: 2px dashed #808080;
+}
+
+body.light .footer, body.light .connect-text {
+  background-color: #f1f1f1;
+  border: 2px dashed #808080;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem 0.4rem; /* Less padding for small screens */
+  }
+
+  .footer-links {
+    gap: 0.5rem;
+    font-size: 0.75rem; /* Smaller font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.4rem 0.3rem; /* More compact on very small screens */
+  }
+
+  .footer-links {
+    gap: 0.4rem;
+    font-size: 0.7rem; /* Even smaller font */
+  }
+
+  .love-msg, .copyright {
+    font-size: 0.65rem; /* Minimized text size for mobile */
+  }
+}
+        
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Ensure the menu doesn't cause layout shifts when hidden */
+    .menu {
+        display: none;    /* Hide menu */
+        visibility: hidden; /* Prevent layout shifts */
+        height: 0;         /* Optionally set height to 0 */
+        contain: layout;    /* Improve layout containment */
+    }
+    
+    /* Padding for header - ensure consistency across screen sizes */
+    .header {
+        padding: 1rem;    /* Fixed padding to prevent layout shifts */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+    
+    /* Tabs layout on mobile */
+    .tabs {
+        gap: 0;
+        justify-content: space-between;
+        padding: 0 1rem;  /* Ensure no gap in the content */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+    
+    /* Tab items */
+    .tab {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        flex: 1;
+        text-align: center;
+        min-width: 50px;  /* Prevent resizing or shrinking of tab content */
+        box-sizing: border-box;  /* Avoid layout shifts from padding */
+        white-space: nowrap; /* Prevent text wrapping causing height changes */
+    }
+    
+    /* Grid layout - ensure it doesn't cause unexpected shifts */
+    .grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        width: 100%;      /* Ensure full width */
+    }
+}
+
+.ad-slot {
+  min-height: 90px;
+  max-width: 728px;
+  width: 100%; /* Ensures the ad slot is responsive */
+  margin: 20px auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Prevents padding from affecting the overall layout */
+  overflow: hidden; /* Prevents overflow that may cause shifts */
+  position: relative; /* Avoids layout shifts when content loads */
+  contain: layout size; /* Improve performance containment */
+  aspect-ratio: 728/90; /* Maintain standard banner ad ratio */
+}
+
+/* Ensure content inside the ad doesn't cause a layout shift */
+.ad-slot img {
+  width: 100%; /* Make sure the image fits */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Prevents any stretching of the image */
+  will-change: transform; /* Prepares for smoother loading */
+  aspect-ratio: auto; /* Preserve image aspect ratio */
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: var(--text-color); /* Adapt to dark/light mode */
+  background-color: var(--card-bg); /* Matching the card background */
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  opacity: 0; /* Start invisible but maintain layout space */
+  pointer-events: none; /* Disable interaction when hidden */
+  display: flex; /* Always in layout flow - key for 0.00 CLS */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, 
+              background-color 0.3s ease-in-out,
+              opacity 0.3s ease-in-out; /* Add opacity transition */
+  z-index: 9999;
+  transform: translateZ(0); /* Hardware acceleration */
+  will-change: transform, opacity; /* Hint for browser to optimize these properties */
+  contain: layout paint; /* Performance optimization */
+}
+
+/* Visible state */
+#scrollTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--hover-bg); /* Subtle hover effect */
+  transform: translateY(-2px) translateZ(0); /* Small lift effect with hardware acceleration */
+}
+
+@media (prefers-color-scheme: dark) {
+  #scrollTopBtn {
+    color: var(--text); /* Light text for dark mode */
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: var(--hover-bg);
+  }
+}
+
+/* Container for the logo */
+.logo-link {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 200px; /* Original width of the logo */
+  height: 50px; /* Original height of the logo */
+  display: inline-block;
+  cursor: pointer; /* Pointer when hovering over the logo */
+    display: inline-block;
+  line-height: 0;          /* Removes vertical spacing */
+    z-index: 9999; /* ✅ Ensure it’s on top and fully clickable */
+}
+
+/* Logo image styles */
+.logo-link img {
+  width: 100%;  /* Make the image fill the container width */
+  height: 100%; /* Make the image fill the container height */
+  object-fit: contain; /* Maintain the aspect ratio and avoid stretching */
+  display: block;
+    display: block;          /* Removes bottom whitespace */
+  pointer-events: auto;    /* Ensures pointer interacts properly */
+  /* REMOVED pointer-events: none - this was the culprit */
+  /* cursor: inherit is not needed since the parent container handles it */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-link {
+    width: 150px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-link {
+    width: 120px;
+    height: 32px;
+  }
+}
+
+/* Add these to your CSS file */
+[id^="loveBtn-"] span {
+    display: inline-block;
+    min-width: 1ch;
+}
+
+.share-btn {
+    min-width: 70px; /* Adjust to match your design */
+}
+
+/* Centered Minimal Consent Bar */
+/* Cookie Bar Styling */
+.cookie-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 480px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--cookie-shadow);
+  z-index: 9999;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  transition: opacity 0.3s, transform 0.3s;
+  background: var(--cookie-bg);
+  border: 1px solid var(--cookie-border);
+  color: var(--cookie-text);
+}
+
+.cookie-bar.hidden {
+  opacity: 0;
+  transform: translate(-50%, 100px);
+  pointer-events: none;
+}
+
+.cookie-bar-text {
+  margin-bottom: 14px;
+  line-height: 1.4;
+  color: var(--cookie-text);
+}
+
+.cookie-bar-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cookie-bar-button {
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 3px var(--cookie-shadow);
+}
+
+/* Got it! button */
+.cookie-button-accept {
+  background-color: #4CAF50; /* Green (ads-style) */
+  color: white;
+  font-weight: 600;
+}
+
+.cookie-button-accept:hover {
+  background-color: #45a049; /* Slightly darker green for hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* No Way! button */
+.cookie-button-reject {
+  background-color: #f44336; /* Red (ads-style) */
+  color: white;
+}
+
+.cookie-button-reject:hover {
+  background-color: #e53935; /* Slightly darker red for hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Preferences button */
+.cookie-button-preferences {
+  background-color: #00bcd4; /* Cyan (ads-style) */
+  color: white;
+}
+
+.cookie-button-preferences:hover {
+  background-color: #00acc1; /* Slightly darker cyan for hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Minimal Cookie Preferences Modal */
+.cookie-preferences {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.cookie-preferences.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.preferences-container {
+  width: 90%;
+  max-width: 420px;
+  border-radius: 8px;
+  padding: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--cookie-bg);
+  color: var(--cookie-text);
+  border: 1px solid var(--cookie-border);
+}
+
+.save-preferences {
+  background-color: #4CAF50; /* Green for Save Button */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.save-preferences:hover {
+  background-color: #45a049; /* Slightly darker green for hover */
+}
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .cookie-bar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 12px;
+            }
+
+            .cookie-bar-text {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .cookie-bar-buttons {
+                justify-content: center;
+            }
+        }
+
+
+
+
+.heart-wrapper {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.25) 20%, transparent 80%);
+  animation: softPulse 3s infinite;
+  transition: background 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 10px var(--glow));
+}
+
+.heart-wrapper.broken {
+  background: none !important;
+  animation: none !important;
+  filter: none !important;
+}
+
+.heart {
+  width: 30px;
+  height: 27px;
+  background: var(--hotpink);
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 15px;
+  left: 15px;
+  border-radius: 20% 20% 0 0;
+  box-shadow:
+    0 0 4px var(--glow),
+    2px 2px 6px var(--glow),
+    -2px -2px 6px var(--glow),
+    inset 0 0 4px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  z-index: 1;
+  filter: drop-shadow(0 0 2px var(--glow)) drop-shadow(0 0 6px var(--glow));
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  width: 30px;
+  height: 27px;
+  background: var(--hotpink);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.heart::before {
+  top: -17px;
+  left: 0;
+}
+
+.heart::after {
+  left: 17px;
+  top: 0;
+}
+
+/* Bandage styling */
+.bandage {
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  width: 22px;
+  height: 8px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 1.5px 2px rgba(0, 0, 0, 0.1);
+  transform: rotate(-15deg);
+  z-index: 2;
+}
+
+.bandage::before,
+.bandage::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.bandage::before {
+  left: 5px;
+}
+
+.bandage::after {
+  right: 5px;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px #ff2d2d);
+  }
+  50% {
+    transform: scale(1.07);
+    filter: drop-shadow(0 0 10px #ff2d2d);
+  }
+}
+
+.broken {
+  animation: breakHeart 3s ease-in-out forwards;
+}
+
+@keyframes breakHeart {
+  0% {
+    transform: rotate(0deg) translate(0, 0) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px var(--glow));
+  }
+  40% {
+    transform: rotate(15deg) translate(-8px, -12px) scale(1.1);
+    filter: drop-shadow(0 0 16px var(--glow));
+    opacity: 0.8;
+  }
+  70% {
+    transform: rotate(45deg) translate(-45px, -45px) scale(0.8);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(90deg) translate(-110px, -90px) scale(0.2);
+    opacity: 0;
+    filter: none;
+  }
+}
+
+
+
+/* Keep original animation wrapper */
+.moon-wrapper {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  animation: softPulse 3s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* True-color eclipse moon */
+.moon {
+  width: 40px;
+  height: 40px;
+  background: #111; /* dark moon */
+  border-radius: 50%;
+  box-shadow:
+    0 0 8px #ffaa00,
+    0 0 12px #ffaa00,
+    0 0 20px #ff8800,
+    inset 0 0 6px rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: visible;
+}
+
+/* Halo around the moon */
+.moon::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ffcc66;
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+/* Match system theme (optional) */
+@media (prefers-color-scheme: dark) {
+  .moon::before {
+    background: transparent;
+    box-shadow: 0 0 12px #ff9933;
+  }
+}
+
+/* Original pulse animation */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 3px #ffaa00);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #ffcc66);
+  }
+}
+
+
+
+    </style>
 </head>
-<body>
-  <h1>Hello World</h1>
-  <p>My GitHub Pages site is live.</p>
+<body class="light">
+<!-- Header Section -->
+<header class="header" role="banner">
+    <div class="nav-container">
+<a href="https://www.loveormoon.com/" aria-label="Home" class="logo-link">
+  <img 
+    src="emran_69/assets/logo_six.png" 
+    alt="Love Or Moon Logo" 
+    width="200" 
+    height="50"
+    loading="eager" 
+    fetchpriority="high" 
+    decoding="async" 
+    class="logo-img"
+    id="siteLogo" />
+</a>
+<p id="changingText"></p>
+
+<!-- Main menu and submenu -->
+        <nav class="main-nav" role="navigation">
+    <li class="nav-item">
+        <a href="https://loveormoon.com/productpage.html" class="nav-link" target="_blank" rel="noopener noreferrer">Products</a>
+        <ul class="submenu">
+            <li class="submenu-item"><a href="https://loveormoon.com/professionalprompt.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Professional Prompt</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/cpapage.html" class="submenu-link" target="_blank" rel="noopener noreferrer">CPA Marketing</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/ftpmovielink.html" class="submenu-link" target="_blank" rel="noopener noreferrer">FTP Movie Link BD</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a href="https://loveormoon.com/servicespage.html" class="nav-link" target="_blank" rel="noopener noreferrer">Services</a>
+        <ul class="submenu"> 
+            <li class="submenu-item"><a href="https://loveormoon.com/fullstackweb.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Fullstack Web Developer</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/flutterdeveloper.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Flutter Game Developer</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/ethicalhacker.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Ethical Hacking</a></li>
+        </ul>
+    </li>
+    <li class="nav-item"> 
+        <a href="https://loveormoon.com/about_us.html" class="nav-link" target="_blank" rel="noopener noreferrer">About</a>
+        <ul class="submenu">
+            <li class="submenu-item"><a href="https://loveormoon.com/privacy_policy.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/terms_conditions.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
+<!--             <li class="submenu-item"><a href="https://loveormoon.com/contactus.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Contact Us</a></li>  -->
+            <li class="submenu-item"><a href="https://loveormoon.com/sitemap.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Sitemap</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/feedback_reports.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Feedback / Report's</a></li>
+<!--        <li class="submenu-item"><a href="https://loveormoon.com/aboutus.html" class="submenu-link" target="_blank" rel="noopener noreferrer">About Us</a></li> -->
+            <li class="submenu-item"><a href="https://loveormoon.com/disclaimer.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Disclaimer</a></li>
+        </ul> 
+    </li>
+    <li class="nav-item"><a href="https://shrinkearn.com/st?api=fc41a357964c70666445afda1e6c894cce46f53b&url=https://loveormoon.blogspot.com/
+" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
+    <li class="nav-item"><a href="https://loveormoon.com/contact_us.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a>
+
+<!--        <ul class="submenu">
+            <li class="submenu-item"><a href="https://loveormoon.com/ourteam.html" class="submenu-link" target="_blank" rel="noopener noreferrer">Our Team</a></li>
+            <li class="submenu-item"><a href="https://loveormoon.com/ourhistory.html" class="submenu-link" target="_blank" rel="noopener noreferrer">History</a></li>
+        </ul>   -->
+    </li>
+</nav>
+
+<!-- Toggle theme -->
+        <div class="controls">
+    <button class="theme-toggle" aria-label="Toggle theme" id="themeToggle">🌻</button>
+    <div class="menu-toggle" aria-label="Menu toggle" role="button">☰</div>
+</div>
+</header>
+  
+<!-- Tab navigation -->
+<div class="tabs-container">
+    <ul class="tabs">
+        <li class="tab active" data-tab="1">AI & Smart Assistant</li>
+        <li class="tab" data-tab="2">Image / Video Generation</li>
+        <li class="tab" data-tab="3">Content & Creation</li>
+        <li class="tab" data-tab="4">Marketing & Social Media Management</li>
+        <li class="tab" data-tab="5">Graphic & Design</li>
+        <li class="tab" data-tab="6">Agent & Notetakers</li>
+        <li class="tab" data-tab="7">App Builders & Coding</li>
+        <li class="tab" data-tab="8">Personalized & Collaborative</li>
+        <li class="tab" data-tab="9">Voice / Music Generation</li>
+        <li class="tab" data-tab="10">Smart Earning by AI</li>
+    </ul>
+</div>
+
+
+<!-- Tab-specific messages -->
+<div id="tabMessages">
+<p class="apple-text" data-tab="1" style="display:none;">
+    💰 Unlock Profit Potential with AI – your 24/7 digital business partner! Discover 1000+ powerful AI tools designed to help you make money faster. From automating income streams to optimizing marketing, managing clients, and launching digital products, these smart assistants turn ideas into income – effortlessly!
+</p>
+<p class="apple-text" data-tab="2" style="display:none;">
+    💸 Turn Creativity into Cash with AI Image & Video Tools – instantly generate stunning visuals and videos that sell! Perfect for marketers, content creators, and entrepreneurs, these 1,000+ tools help you create high-converting ads, viral social media content, and digital products that drive revenue. Monetize your creativity at scale!
+</p>
+<p class="apple-text" data-tab="3" style="display:none;">
+    🤑 Make Money with AI-Powered Content Creation – write blogs, ads, scripts, and product descriptions that sell! These 1,000+ AI tools help entrepreneurs, marketers, and freelancers create high-converting content faster than ever. Scale your output, attract clients, and boost your income with smart writing solutions!
+</p>
+<p class="apple-text" data-tab="4" style="display:none;">
+    📈 Maximize Profits with AI Marketing & Social Media Tools – grow your audience, boost engagement, and drive sales with ease! These 1,000+ tools help you automate content, launch high-ROI campaigns, and turn followers into paying customers. Build your brand and bank account at the same time!
+</p>
+<p class="apple-text" data-tab="5" style="display:none;">
+    💼 Monetize Your Design Skills with AI Graphic Tools – create logos, branding kits, illustrations, and UI assets in minutes! These 1,000+ AI design tools help freelancers, entrepreneurs, and agencies deliver pro-quality work faster, land more clients, and grow income with ease. Design smarter, earn bigger!
+</p>
+<p class="apple-text" data-tab="6" style="display:none;">
+    🧠 Boost Productivity & Profits with AI Agents and Smart Notetakers – automate admin work, capture insights, and streamline operations to save time and make more money! With 1,000+ powerful tools, you can focus on high-value tasks, close deals faster, and run your business like a pro—without the busywork.
+</p>
+<p class="apple-text" data-tab="7" style="display:none;">
+    💻 Turn Code into Cash with AI App Builders & Coding Tools – rapidly build, launch, and monetize websites, SaaS platforms, and digital products! These 1,000+ AI tools help developers and entrepreneurs streamline workflows, reduce dev time, and create income-generating apps with ease. Build smarter, earn faster!
+</p>
+<p class="apple-text" data-tab="8" style="display:none;">
+    🤝 Boost Team Profits with Personalized & Collaborative AI Tools – streamline workflows, automate teamwork, and deliver tailored client experiences that drive revenue! These 1,000+ smart solutions help businesses scale faster, close more deals, and maximize productivity across the board. Work smarter, earn together!
+</p>
+<p class="apple-text" data-tab="9" style="display:none;">
+    🎶 Turn Sound into Income with AI Voice & Music Tools – create studio-quality tracks, voiceovers, and sound effects in minutes! Perfect for artists, marketers, and content creators, these 1,000+ tools help you monetize audio through licensing, streaming, content production, and more. Create, publish, and profit!
+</p>
+<p class="apple-text" data-tab="10" style="display:none;">
+    💵 Supercharge Your Income with Smart AI Earning Tools – tap into automated trading, affiliate marketing, content monetization, and more! These 1,000+ tools are built to generate passive income, scale side hustles, and help you earn around the clock with minimal effort. Let AI work while you profit!
+</p>
+</div>
+
+
+  
+  
+  
+
+
+<!-- Main content area -->
+<main class="content-area">
+    <!-- Ad Slot 1 (Placeholder) -->
+    <div class="ad-slot">
+        Ad Space (e.g., 728x90)
+    </div>
+
+    <!-- Card grid - populated by JavaScript -->
+    <div class="grid" id="cardGrid">
+        <!-- Cards will be injected by JS -->
+    </div>
+
+    <!-- Ad Slot 2 (Placeholder) -->
+    <div class="ad-slot">
+        Ad Space (e.g., 728x90)
+    </div>
+	  <div class="heart-wrapper" onclick="breakHeart(this)" title="ভালোবাসা ❤️">
+  <div class="heart" id="heart"></div>
+  <div class="bandage"></div>
+</div>
+
+
+
+
+    <!-- Pagination -->
+    <div class="pagination">  
+        <button class="page-button nav-button" id="prevButton">Previous</button>
+        <button class="page-button active">1</button>
+        <button class="page-button">2</button>
+        <button class="page-button">3</button>
+        <button class="page-button">4</button>
+        <button class="page-button">5</button>
+        <button class="page-button">6</button>
+        <button class="page-button">7</button>
+        <button class="page-button">8</button>
+        <button class="page-button">9</button>
+        <button class="page-button">10</button>
+        <button class="page-button nav-button" id="nextButton">Next</button>
+    </div>
+	<div class="moon-wrapper" onclick="breakMoon()" title="অথবা চাঁদ 🌘">
+    <div class="moon" id="moon"></div>
+  </div>
+</main>
+
+    
+<!-- Footer section -->
+<div class="egg-hook">
+  🥚 <strong>Crack Me!</strong> Click any egg below to unlock a hidden surprise. Some are rare... 👀
+</div>
+<div class="egg-container">
+  <div class="egg egg1" title="🪦 don't touch" onclick="popEgg(this, 1)"></div>
+  <div class="egg egg2" title="🙈 really, don't" onclick="popEgg(this, 2)"></div>
+  <div class="egg egg3" title="🥚 fragile!" onclick="popEgg(this, 3)"></div>
+  <div class="egg egg4" title="⚠️ too hot" onclick="popEgg(this, 4)"></div>
+  <div class="egg egg5" title="🐣 shh... sleeping" onclick="popEgg(this, 5)"></div>
+  <div class="egg egg6" title="😵 last warning" onclick="popEgg(this, 6)"></div>
+  <div class="egg egg7" title="💀 danger zone" onclick="popEgg(this, 7)"></div>
+  <div class="egg egg8" title="😇 be gentle" onclick="popEgg(this, 8)"></div>
+  <div class="egg egg9" title="🧊 icy egg" onclick="popEgg(this, 9)"></div>
+  <div class="egg egg10" title="📿 sacred egg" onclick="popEgg(this, 10)"></div>
+</div>
+
+<!-- This is Social Bar -->
+<section class="ads-promo">
+  <div class="ads-hook apple-text">
+    🚀 <strong>Stay Connected</strong> – Follow us for exclusive content, updates & giveaways!
+  </div>
+  <div class="social-bar">
+    <a href="http://youtube.com/post/UgkxTxZ2Vs1i_i7JXs1Bp3ONxR9TedGS252b?si=Skq3JcUfgmYdM22C" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+    <a href="https://www.facebook.com/profile.php?id=61559402033409" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+    <a href="https://www.instagram.com/moc.noomroevol.www?igsh=MTA4eGJqejlydm9wbw==" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+    <a href="https://www.tiktok.com/@www.loveormoon.com?_t=ZS-8wj3sfKMmaf&_r=1" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+    <a href="https://x.com/EmranHa55295895" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+    <a href="https://pin.it/4zuldcnR9" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+    <a href="https://t.me/loveormoon" target="_blank" rel="noopener" aria-label="Telegram">Telegram</a>
+    <a href="https://www.snapchat.com/add/emran_hasan6317?share_id=6XNmcSmpSGg&locale=en-US" target="_blank" rel="noopener" aria-label="Snapchat">Snapchat</a>
+    <a href="https://www.linkedin.com/in/emran-hasan-51910b16a/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    <a href="https://chat.whatsapp.com/BCpRHPuLic3DE2xQSAyHZh" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+  </div>
+</section>
+<!-- ✅ Place inside your existing HTML page -->
+<div class="store-buttons-bar">
+  <!-- Google Play -->
+<a class="store-button" 
+   href="https://play.google.com/store/apps/dev?id=9210704574096106810&hl=en" 
+   target="_blank" 
+   rel="noopener" 
+   title="Available on Google Play">
+  <div class="badge-wrapper">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+         alt="Get it on Google Play" loading="lazy" />
+  </div>
+</a>
+  <!-- App Store -->
+<div style="text-align: center;">
+  <div class="badge-wrapper" title="Coming Soon" style="display: inline-block; cursor: not-allowed;">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+         alt="Download on the App Store" loading="lazy" style="opacity: 0.5; pointer-events: none;" />
+  </div>
+</div>
+  <!-- Web App -->
+<a class="store-button web-button" 
+   href="#" 
+   target="_blank" 
+   rel="noopener" 
+   style="cursor: not-allowed; pointer-events: none;">
+  <div class="badge-wrapper web-badge">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/internet.png" alt="Web App Icon" />
+    <span>Web App</span>
+  </div>
+</a>
+</div>
+<!-- Optimized Footer HTML -->
+<footer class="footer">
+  <div class="footer-links">
+<a href="https://loveormoon.com/privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a><br>
+<a href="https://loveormoon.com/terms_conditions.html" target="_blank" rel="noopener">Terms & Conditions</a><br>
+<a href="https://loveormoon.com/contact_us.html" target="_blank" rel="noopener">Contact Us</a><br>
+<a href="https://loveormoon.com/sitemap.html" target="_blank" rel="noopener">Sitemap</a><br>
+<a href="https://loveormoon.com/feedback_reports.html" target="_blank" rel="noopener">Feedback / Report's</a><br>
+<a href="https://loveormoon.com/about_us.html" target="_blank" rel="noopener">About Us</a><br>
+<a href="https://loveormoon.com/disclaimer.html" target="_blank" rel="noopener">Disclaimer</a><br>
+  </div>
+  
+  <div class="love-msg">
+    Made with <span aria-hidden="true">❤️</span> www.loveormoon.com
+    <span class="sr-only">Love</span>
+  </div>
+  
+  <div class="connect-text apple-text"><u>"When money speaks, nobody checks the grammar"</u><br>
+    Let’s stay in touch — don’t miss out on what’s next!
+  </div>
+  
+  <div class="copyright">
+    © <span id="year"></span> www.loveormoon.com All rights reserved.
+  </div>
+</footer>
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Back to top">🛦</button>
+<!--	// ===== Cookie Consent =====  -->
+
+<!-- 🍪 Cookie Consent Banner -->
+    <!-- Cookie Consent Bar -->
+    <div id="cookieBar" class="cookie-bar">
+        <div class="cookie-bar-text">
+            🍪 We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+        </div>
+        <div class="cookie-bar-buttons">
+            <button id="acceptCookies" class="cookie-bar-button cookie-button-accept">Got it!</button>
+            <button id="rejectCookies" class="cookie-bar-button cookie-button-reject">No way!</button>
+            <button id="showPreferences" class="cookie-bar-button cookie-button-preferences">Preferences</button>
+        </div>
+        <div class="cookie-bar-links">
+<a href="https://loveormoon.com/cookie_learnmore.html" target="_blank" rel="noopener noreferrer" id="learnMoreLink">Learn more</a> | 
+<a href="https://loveormoon.com/privacy_policy.html" target="_blank" rel="noopener noreferrer" id="privacyPolicyLink">Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- Cookie Preferences Modal cookielearnmore.html -->
+    <div id="cookiePreferences" class="cookie-preferences">
+        <div class="preferences-container">
+            <div class="preferences-header">
+                <h3>Cookie Preferences</h3>
+                <button id="closePreferences" class="close-preferences">×</button>
+            </div>
+            
+            <div class="preference-option">
+                <label class="preference-switch">
+                    <input type="checkbox" id="necessaryCookies" checked disabled>
+                    <span class="switch-slider"></span>
+                </label>
+                <div class="preference-text">
+                    <h4>Necessary Cookies</h4>
+                    <p>These cookies are required for the website to function properly. They cannot be disabled.</p>
+                </div>
+            </div>
+            
+            <div class="preference-option">
+                <label class="preference-switch">
+                    <input type="checkbox" id="analyticsCookies">
+                    <span class="switch-slider"></span>
+                </label>
+                <div class="preference-text">
+                    <h4>Analytics Cookies</h4>
+                    <p>Help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+                </div>
+            </div>
+            
+            <div class="preference-option">
+                <label class="preference-switch">
+                    <input type="checkbox" id="marketingCookies">
+                    <span class="switch-slider"></span>
+                </label>
+                <div class="preference-text">
+                    <h4>Marketing Cookies</h4>
+                    <p>Used to track visitors across websites to display relevant advertisements.</p>
+                </div>
+            </div>
+            
+            <button id="savePreferences" class="save-preferences">Save Preferences</button>
+        </div>
+    </div>
+<!-- JavaScript Start Now -->
+<script>
+	
+		// ===== Header Message =====
+
+// Optimized version - maintains same functionality with performance improvements
+const textElement = document.getElementById("changingText");
+const messages = [
+
+  "small steps<br>big changes.",
+  "systems beat<br>goals.",
+  "tiny habits<br>huge results.",
+  "actions define<br>identity.",
+  "design spaces<br>for success.",
+  "make habits<br>obvious.",
+  "make habits<br>attractive.",
+  "make habits<br>easy.",
+  "make habits<br>satisfying.",
+  "start stupidly<br>small.",
+  "never skip<br>twice.",
+  "consistency over<br>intensity.",
+  "automate good<br>choices.",
+  "track your<br>progress.",
+  "stack new<br>habits.",
+  "bundle wants<br>with needs.",
+  "repeat to<br>improve.",
+  "become before<br>achieving.",
+  "patience beats<br>hype.",
+  "micro gains<br>matter.",
+  "environment shapes<br>behavior.",
+  "willpower fails<br>often.",
+  "routines create<br>freedom.",
+  "boredom kills<br>progress.",
+  "success feels<br>boring.",
+  "discipline now<br>rewards later.",
+  "measure what<br>matters.",
+  "review habits<br>weekly.",
+  "frequency beats<br>perfection.",
+  "plateaus precede<br>breakthroughs.",
+  "trust small<br>steps.",
+  "tiny tweaks<br>big wins.",
+  "every action<br>votes.",
+  "reduce friction<br>for good habits.",
+  "add friction<br>to bad habits.",
+  "rewards reinforce<br>repetition.",
+  "punishments stop<br>habits.",
+  "clarity enables<br>action.",
+  "rituals beat<br>motivation.",
+  "identity drives<br>behavior.",
+  "habits become<br>automatic.",
+  "begin before<br>feeling ready.",
+  "progress fuels<br>motivation.",
+  "feedback improves<br>habits.",
+  "context controls<br>actions.",
+  "celebrate small<br>wins.",
+  "habits shape<br>character.",
+  "repetition creates<br>mastery.",
+  "show up<br>daily.",
+  "embrace the<br>grind.",
+	
+	// next 50 
+	
+  "being busy is<br>a form of laziness.",
+  "focus on being<br>productive not busy.",
+  "work smarter not<br>longer.",
+  "automate income<br>first.",
+  "outsource everything<br>non-essential.",
+  "time freedom beats<br>dollars.",
+  "eliminate before<br>you delegate.",
+  "most tasks are<br>pointless.",
+  "question all<br>assumptions.",
+  "lifestyle design<br>before career.",
+  "mini-retirements beat<br>one long retirement.",
+  "geoarbitrage means<br>living better cheaper.",
+  "information diet is<br>crucial.",
+  "limit news and<br>social media.",
+  "productivity is about<br>doing less.",
+  "80/20 rule applies<br>to everything.",
+  "focus on the<br>vital few.",
+  "cut the trivial<br>many.",
+  "email twice<br>a day.",
+  "batch similar tasks<br>together.",
+  "set artificial<br>deadlines.",
+  "negotiate remote<br>work first.",
+  "build systems not<br>jobs.",
+  "passive income buys<br>freedom.",
+  "start small but<br>start now.",
+  "test ideas before<br>committing.",
+  "failure is just<br>data.",
+  "muse business model:<br>automated income.",
+  "remove before<br>optimizing.",
+  "sell what people<br>already buy.",
+  "price determines<br>perceived value.",
+  "niches make<br>riches.",
+  "trust but<br>verify.",
+  "document don't<br>create.",
+  "repurpose content<br>everywhere.",
+  "outsource to<br>virtual assistants.",
+  "time is the<br>only currency.",
+  "mobile office<br>enables freedom.",
+  "location independence<br>is freedom.",
+  "multiple income<br>streams matter.",
+  "invest in<br>learning.",
+  "skills trump<br>degrees.",
+  "learning should be<br>applied.",
+  "action beats<br>planning.",
+  "perfect is the<br>enemy of done.",
+  "fear is worse<br>than failure.",
+  "comfort zones are<br>dangerous.",
+  "routine creates<br>freedom.",
+  "automation creates<br>options.",
+  "freedom is the<br>ultimate luxury.",
+	
+	// Next 50 
+	
+  "focus is the<br>new iq.",
+  "deep work beats<br>shallow work.",
+  "distraction is<br>the enemy.",
+  "attention is your<br>most valuable asset.",
+  "single-tasking is<br>superpower.",
+  "flow state requires<br>unbroken focus.",
+  "schedule every<br>minute.",
+  "batch shallow tasks<br>together.",
+  "quit social media<br>for focus.",
+  "work like a<br>monk sometimes.",
+  "deep work creates<br>true value.",
+  "shallow work kills<br>progress.",
+  "attention residue<br>destroys focus.",
+  "train focus like<br>a muscle.",
+  "eliminate all<br>distractions.",
+  "grand gestures boost<br>concentration.",
+  "create focus<br>rituals.",
+  "willpower fails<br>eventually.",
+  "design systems for<br>deep work.",
+  "measure depth of<br>your work.",
+  "busyness is not<br>productivity.",
+  "4-hour focus beats<br>8-hour distraction.",
+  "schedule downtime<br>for creativity.",
+  "boredom trains<br>your focus.",
+  "digital minimalism<br>helps focus.",
+  "deep work requires<br>hard rules.",
+  "shallow work expands<br>to fill time.",
+  "protect focus at<br>all costs.",
+  "attention fractures<br>easily.",
+  "recharge for better<br>concentration.",
+  "deep work delivers<br>career capital.",
+  "multitasking destroys<br>quality.",
+  "isolate to<br>concentrate.",
+  "train undistracted<br>focus daily.",
+  "deep work is<br>rare today.",
+  "shallow work feels<br>productive.",
+  "deep work feels<br>uncomfortable.",
+  "create distraction-free<br>zones.",
+  "schedule internet<br>blocks.",
+  "deep work builds<br>real skills.",
+  "shallow work is<br>fake productivity.",
+  "attention control is<br>success control.",
+  "deep work compounds<br>over time.",
+  "shallow work has<br>low value.",
+  "deep work requires<br>daily practice.",
+  "email is shallow<br>work.",
+  "meetings are shallow<br>work.",
+  "prioritize depth over<br>visibility.",
+  "deep work creates<br>career leverage.",
+  "mastery requires deep<br>practice.",
+  "focus creates<br>extraordinary results.",
+	
+	// next 50
+	
+  "assets feed you<br>liabilities eat you.",
+  "work to learn<br>not to earn.",
+  "mind your own<br>business always.",
+  "the rich invent<br>money systems.",
+  "fear and greed<br>control most people.",
+  "financial education<br>is true wealth.",
+  "schools teach slavery<br>not freedom.",
+  "jobs are short-term<br>solutions.",
+  "houses aren't assets<br>unless cashflow.",
+  "the poor work<br>for money.",
+  "the middle class<br>buys liabilities.",
+  "the rich focus<br>on assets.",
+  "taxes punish workers<br>reward owners.",
+  "corporations protect<br>your wealth.",
+  "make money work<br>for you.",
+  "savers are losers<br>in inflation.",
+  "real assets buy<br>freedom.",
+  "excuses cost you<br>millions.",
+  "most people choose<br>paycheck slavery.",
+  "fear keeps people<br>poor.",
+  "take calculated risks<br>daily.",
+  "opportunities multiply<br>as you act.",
+  "money is just<br>an idea.",
+  "poor people blame<br>others always.",
+  "rich people solve<br>money problems.",
+  "invest first then<br>spend later.",
+  "financial iq beats<br>job security.",
+  "jobs won't make<br>you rich.",
+  "own the system<br>not the job.",
+  "money reveals character<br>quickly.",
+  "the rich think<br>differently.",
+  "money flows to<br>financial intelligence.",
+  "work for assets<br>not wages.",
+  "poor dad said<br>study hard.",
+  "rich dad said<br>master money.",
+  "most investments are<br>cons.",
+  "true wealth is<br>free time.",
+  "employees take risks<br>without rewards.",
+  "business owners get<br>rich sleeping.",
+  "the rat race<br>is optional.",
+  "winners see problems<br>as opportunities.",
+  "losers see opportunities<br>as risks.",
+  "financial freedom beats<br>fake security.",
+  "pay yourself first<br>always.",
+  "debt can be<br>good or bad.",
+  "poor people fear<br>losing money.",
+  "rich people learn<br>from losses.",
+  "money without financial<br>iq disappears.",
+  "the rich create<br>their luck.",
+  "start small think<br>big always.",
+	
+	// Next 50
+	
+  "passion plus<br>profit works.",
+  "start small then<br>scale fast.",
+  "value creation beats<br>formal education.",
+  "solve specific problems<br>for real people.",
+  "build audience before<br>selling products.",
+  "launch fast then<br>iterate faster.",
+  "small markets make<br>big opportunities.",
+  "sell what people<br>already want.",
+  "low cost beats<br>big loans.",
+  "action cures fear<br>every time.",
+  "niches create riches<br>faster.",
+  "test ideas before<br>full commitment.",
+  "side hustles grow<br>into empires.",
+  "skills trump degrees<br>in business.",
+  "time freedom beats<br>corporate ladder.",
+  "automate income streams<br>early.",
+  "customers fund your<br>learning curve.",
+  "productize your<br>expertise.",
+  "repurpose content across<br>platforms.",
+  "small actions compound<br>quickly.",
+  "sell transformation not<br>just products.",
+  "price based on<br>value delivered.",
+  "bootstrap don't borrow<br>when starting.",
+  "build systems not<br>just income.",
+  "lifestyle businesses beat<br>traditional jobs.",
+  "start before feeling<br>fully ready.",
+  "imperfect action beats<br>perfect planning.",
+  "focus on revenue<br>not just traffic.",
+  "one product can<br>change everything.",
+  "eliminate unnecessary tasks<br>ruthlessly.",
+  "outsource non-core<br>activities.",
+  "digital products scale<br>infinitely.",
+  "physical location doesn't<br>matter.",
+  "small teams move<br>faster.",
+  "customer feedback drives<br>improvement.",
+  "pre-sell before building<br>products.",
+  "package knowledge into<br>sellable formats.",
+  "teach what you<br>learn.",
+  "build once sell<br>many.",
+  "scarcity creates urgency<br>smartly.",
+  "free samples boost<br>conversions.",
+  "email lists print<br>money.",
+  "simple offers convert<br>better.",
+  "remove friction from<br>purchases.",
+  "guarantees reduce buyer<br>fear.",
+  "stories sell better<br>than facts.",
+  "personal brand builds<br>trust.",
+  "consistency beats viral<br>moments.",
+  "small profits compound<br>quickly.",
+  "start now adjust<br>later.",
+  "freedom is the<br>ultimate metric.",
+	
+	// Next 50
+	
+  "focus on the<br>one thing.",
+  "multitasking is a<br>myth.",
+  "success leaves clues<br>follow them.",
+  "priority determines productivity<br>not hours.",
+  "willpower is limited<br>use wisely.",
+  "small steps create<br>big results.",
+  "time block your<br>most important task.",
+  "say no to<br>distractions.",
+  "success is sequential<br>not simultaneous.",
+  "focus beats balance<br>every time.",
+  "one domino can<br>knock down many.",
+  "habits create long-term<br>success.",
+  "purpose drives productivity<br>naturally.",
+  "extraordinary results require<br>narrow focus.",
+  "busyness is not<br>productivity.",
+  "time is finite<br>spend wisely.",
+  "priority determines success<br>not effort.",
+  "goal setting starts<br>with one.",
+  "focus on essentials<br>eliminate rest.",
+  "successful people say<br>no often.",
+  "one hour focused<br>beats four distracted.",
+  "productivity follows priority<br>not activity.",
+  "willpower fades use<br>it early.",
+  "small disciplines repeated<br>create mastery.",
+  "time management is<br>energy management.",
+  "one big goal<br>beats many small.",
+  "focus on now<br>not later.",
+  "success comes from<br>doing not planning.",
+  "one priority drives<br>all others.",
+  "eliminate to concentrate<br>on essentials.",
+  "time is your<br>most valuable asset.",
+  "productivity starts with<br>a question.",
+  "what's your one<br>most important thing?",
+  "successful people protect<br>their time.",
+  "focus creates extraordinary<br>results.",
+  "multitasking reduces quality<br>and speed.",
+  "one focused hour<br>changes everything.",
+  "priority determines progress<br>not busyness.",
+  "success is built<br>sequentially not randomly.",
+  "willpower is strongest<br>in morning.",
+  "one thing done<br>well beats many.",
+  "time blocking creates<br>real productivity.",
+  "distractions destroy deep<br>work.",
+  "success comes from<br>consistent focus.",
+  "one goal achieved<br>leads to next.",
+  "productivity follows focus<br>not hours.",
+  "time is limited<br>focus is power.",
+  "one priority drives<br>all success.",
+  "successful people focus<br>relentlessly.",
+  "one thing mastered<br>changes everything.",
+  
+  // next 50
+  
+  "present moment is<br>all you have.",
+  "past and future<br>are illusions.",
+  "awareness dissolves pain<br>instantly.",
+  "ego lives in<br>time.",
+  "surrender to what<br>is.",
+  "thinking creates problems<br>not solutions.",
+  "be the watcher<br>of thoughts.",
+  "stillness speaks louder<br>than words.",
+  "acceptance brings immediate<br>peace.",
+  "presence is your<br>true power.",
+  "time is mind's<br>trap.",
+  "now is all<br>that exists.",
+  "enjoy the space<br>between thoughts.",
+  "suffering needs time<br>to survive.",
+  "stop seeking start<br>being.",
+  "mind loves problems<br>let go.",
+  "breathe to anchor<br>in now.",
+  "emotions are body's<br>reactions.",
+  "worry pretends to<br>be useful.",
+  "presence dissolves anxiety<br>completely.",
+  "life happens now<br>not later.",
+  "awakening is simple<br>but not easy.",
+  "ego fears death<br>of identity.",
+  "love needs no<br>future.",
+  "joy exists only<br>in now.",
+  "problems cannot survive<br>in presence.",
+  "awareness is freedom<br>from mind.",
+  "thoughts are not<br>who you are.",
+  "silence heals everything<br>instantly.",
+  "be present first<br>then act.",
+  "now is the<br>doorway to peace.",
+  "mind resists what<br>is.",
+  "surrender is powerful<br>not weak.",
+  "accept then act<br>if needed.",
+  "presence transforms relationships<br>completely.",
+  "time cannot satisfy<br>only now can.",
+  "past is memory<br>future imagination.",
+  "true intelligence operates<br>beyond thought.",
+  "nature knows no<br>time.",
+  "children live naturally<br>in now.",
+  "death is now<br>not future.",
+  "awaken from thought's<br>dream.",
+  "being is prior<br>to doing.",
+  "mind cannot comprehend<br>presence.",
+  "now is your<br>only point.",
+  "problems dissolve in<br>awareness.",
+  "life flows through<br>present moment.",
+  "enlightenment is now<br>or never.",
+  "stop waiting start<br>living.",
+  "this moment is<br>all there is.",
+  "be here now<br>completely.",
+  
+  // next 50
+  
+  "wealth is built<br>not earned.",
+  "jobs trade time<br>for money.",
+  "business systems create<br>real wealth.",
+  "fastlane means leverage<br>not linearity.",
+  "slowlane is broke<br>retirement plan.",
+  "money trees need<br>systems to grow.",
+  "consumers stay poor<br>producers get rich.",
+  "scale beats hourly<br>wages.",
+  "time freedom beats<br>fake job security.",
+  "wealth is measured<br>in free time.",
+  "processes make money<br>while you sleep.",
+  "solve needs not<br>wants.",
+  "money follows value<br>always.",
+  "fastlane is about<br>impact not income.",
+  "compound growth requires<br>business ownership.",
+  "rich think differently<br>about money.",
+  "poor work for<br>money.",
+  "middle class buys<br>liabilities.",
+  "rich build income<br>streams.",
+  "education without execution<br>is entertainment.",
+  "ideas are worthless<br>execution priceless.",
+  "action beats planning<br>every time.",
+  "fail fast learn<br>faster.",
+  "money magnifies character<br>quickly.",
+  "wealth is freedom<br>not stuff.",
+  "time is your<br>most limited resource.",
+  "lifestyle reflects financial<br>habits.",
+  "excuses keep people<br>poor.",
+  "wealth comes from<br>ownership not wages.",
+  "build sell repeat<br>get rich.",
+  "money loves speed<br>act fast.",
+  "value creation beats<br>job climbing.",
+  "scalability creates millionaires<br>overnight.",
+  "control your income<br>sources.",
+  "poor chase money<br>rich attract it.",
+  "invest in assets<br>that produce.",
+  "liabilities drain wealth<br>fast.",
+  "financial education beats<br>traditional education.",
+  "wealth is passive<br>income streams.",
+  "time is more<br>valuable than money.",
+  "consumer mindset keeps<br>you broke.",
+  "producer mindset creates<br>wealth.",
+  "money follows value<br>not want.",
+  "build systems that<br>work without you.",
+  "wealth is network<br>effects.",
+  "solve problems for<br>millions.",
+  "money is attracted<br>not chased.",
+  "fastlane requires risk<br>and action.",
+  "get rich slow<br>is broke plan.",
+  "wealth is freedom<br>to choose.",
+  "start now perfect<br>later."
+  
+];
+
+// Precompile the HTML template string for better performance
+const template = '<i style="font-family: \'Kite One\', sans-serif; font-style: italic;">';
+
+// Use requestAnimationFrame for smoother rendering
+function updateText() {
+  const randomIndex = Math.floor(Math.random() * messages.length);
+  // Use template literals for faster string concatenation
+  window.requestAnimationFrame(() => {
+    textElement.innerHTML = `${template}${messages[randomIndex]}</i>`;
+  });
+}
+
+// Initially update the text immediately - after page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', updateText);
+} else {
+  updateText();
+}
+
+// Performance optimized interval
+const INTERVAL_TIME = 10000; // 10 seconds
+setInterval(updateText, INTERVAL_TIME);
+
+    // ===== Theme Toggle =====
+	
+// Optimized theme and mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const logo = document.getElementById('siteLogo');
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark');
+        document.body.classList.toggle('light', !isDark);
+        themeToggle.textContent = isDark ? '🌚' : '🌞';
+
+        // ✅ Update logo based on theme
+        logo.src = isDark ? 'emran_69/assets/logo_eight.png' : 'emran_69/assets/logo_six.png';
+    });
+
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.main-nav');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        toggle.classList.toggle('active');
+        toggle.textContent = toggle.classList.contains('active') ? '✕' : '☰';
+    });
+
+    document.addEventListener('click', e => {
+        if (!menu.contains(e.target) && e.target !== toggle) {
+            menu.classList.remove('active');
+            toggle.classList.remove('active');
+            toggle.textContent = '☰';
+        }
+    });
+
+    // ✅ Auto-set correct logo on first load (optional but smart)
+    const isDarkInit = document.body.classList.contains('dark');
+    logo.src = isDarkInit ? 'emran_69/assets/logo_eight.png' : 'emran_69/assets/logo_six.png';
+});
+
+	// ===== Tab Message Switching =====
+	
+// Optimized tab content visibility function
+function updateTabMessage(tabNumber) {
+    // Use direct attribute selector for better performance
+    const tabMessages = document.querySelectorAll('#tabMessages .apple-text');
+    
+    // Hide all messages with a single classList operation
+    for (let i = 0; i < tabMessages.length; i++) {
+        tabMessages[i].style.display = 'none';
+    }
+    
+    // Show only the selected tab message
+    const currentMsg = document.querySelector(`#tabMessages .apple-text[data-tab="${tabNumber}"]`);
+    if (currentMsg) {
+        currentMsg.style.display = 'block';
+    }
+}
+
+	// ===== Tab Switching Functionality =====
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Cache DOM elements
+    const tabs = document.querySelectorAll('.tab');
+    const contentArea = document.querySelector('.content-area');
+    let currentPage = 1; // Default page
+    let currentTab = 1; // Default tab
+    
+    // Create event delegation for tab clicks
+    const tabContainer = document.querySelector('.tabs-container');
+    
+    if (tabContainer) {
+        tabContainer.addEventListener('click', function(e) {
+            // Find closest tab if click happened on a child element
+            const clickedTab = e.target.closest('.tab');
+            
+            if (!clickedTab) return;
+            
+            const tabNumber = clickedTab.dataset.tab;
+            
+            // Skip if already on this tab
+            if (tabNumber == currentTab) return;
+            currentTab = tabNumber;
+            
+            // Update active tab UI
+            const activeTab = document.querySelector('.tab.active');
+            if (activeTab) activeTab.classList.remove('active');
+            clickedTab.classList.add('active');
+            
+            // Update tab message
+            updateTabMessage(tabNumber);
+            
+            // Reset to page 1 when changing tabs
+            currentPage = 1;
+            const pageButtons = document.querySelectorAll('.page-button:not(.nav-button)');
+            const activePageButton = document.querySelector('.page-button.active');
+            if (activePageButton) activePageButton.classList.remove('active');
+            if (pageButtons.length > 0) pageButtons[0].classList.add('active');
+            
+            // Load cards for this tab and page
+            loadCardsByTabAndPage(tabNumber, currentPage);
+            
+            // Scroll to content area with requestAnimationFrame for better performance
+            window.requestAnimationFrame(() => {
+                if (contentArea) {
+                    contentArea.scrollIntoView({
+                        behavior: 'smooth',
+                        // Prevent CLS by using block: 'start'
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+    
+    // Initialize with first tab's message
+    updateTabMessage(1);
+});
+
+    // ===== Card Data =====
+	
+    const tabCards = {
+	// card for tab one...
+        1: [
+            {
+            id: 'openai',
+            number: '#01',
+            name: 'OpenAI',
+            url: 'https://openai.com',
+            blog: 'https://exe.io/loveormoon',
+            category: 'AI, Research',
+            future: 'AGI-driven cities by 2040, sustainable tech.',
+            earn: 'Build AI apps, sell on marketplace',
+            published: 'Dec 11, 2015',
+            updated: 'July 14, 2025'
+        }
+		
+        ],
+		// card for tab two...
+        2: 
+		[
+            {
+    id: 'hailuo_ai',
+    number: '#01',
+    name: 'Hailuo AI',
+    url: 'https://hailuoai.video/',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Image & Video',
+    future: 'T2V, AI image remix, motion scenes.',
+    earn: 'Sell AI art & video packs on Etsy or Fiverr',
+    published: 'Sep 14, 2024',
+    updated: 'May 09, 2025'
+}
+
+        ],
+		// card for tab three...
+        3: 
+		[
+            
+			{
+    id: 'copy_ai',
+    number: '#01',
+    name: 'Copy AI',
+    url: 'https://www.copy.ai',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Content Creation',
+    future: 'AI writing, SEO, and brand voice tools',
+    earn: 'Sell AI-written content on Fiverr or Upwork',
+    published: 'May 01, 2020',
+    updated: 'May 24, 2025'
+}
+
+
+        ],
+		
+		// card for tab four
+        4: [
+            {
+    id: 'buffer_ai',
+    number: '#01',
+    name: 'Buffer AI',
+    url: 'https://buffer.com',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Marketing & Social',
+    future: 'AI post scheduler, cross-platform automation',
+    earn: 'Manage social media for small businesses',
+    published: 'Nov 30, 2010',
+    updated: 'May 24, 2025'
+}
+
+        ],
+		// card for tab five...
+        5: [
+            {
+    id: 'starryai',
+    number: '#01',
+    name: 'StarryAI',
+    url: 'https://starryai.com',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Graphic & Design',
+    future: 'AI-generated art, logos, and apparel designs',
+    earn: 'Sell AI art on Etsy, Redbubble, or Fiverr',
+    published: 'Sep 14, 2021',
+    updated: 'May 24, 2025'
+}
+
+        ],
+		
+		// card for tab six...
+        6: [
+            {
+    id: 'otter_ai',
+    number: '#01',
+    name: 'Otter AI',
+    url: 'https://otter.ai',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Agent & Notetakers',
+    future: 'Real-time transcription, AI meeting summaries',
+    earn: 'Offer meeting transcription services to clients',
+    published: 'Jul 30, 2017',
+    updated: 'May 24, 2025'
+}
+
+        ],
+		// card for tab seven
+        7: [
+            {
+    id: 'softr',
+    number: '#01',
+    name: 'Softr',
+    url: 'https://www.softr.io',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, App Builders & Coding',
+    future: 'No-code AI app builder, rapid prototyping',
+    earn: 'Build & sell custom apps for clients',
+    published: 'Mar 15, 2020',
+    updated: 'May 24, 2025'
+}
+
+        ],
+		// card for tab eight...
+        8: [
+            {
+    id: 'claude_ai',
+    number: '#01',
+    name: 'Claude AI',
+    url: 'https://claude.ai',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Personalized & Collaborative',
+    future: 'Ethical AI assistant, long-context collaboration',
+    earn: 'Offer AI research summaries or writing services',
+    published: 'Mar 14, 2023',
+    updated: 'May 24, 2025'
+}
+
+        ],
+		// card for tab nine...
+        9: [
+            {
+    id: 'suno_ai',
+    number: '#01',
+    name: 'Suno AI',
+    url: 'https://suno-ai.one/',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Voice & Music Generation',
+    future: 'Text-to-song, genre & mood customization',
+    earn: 'Create jingles or royalty-free tracks for clients',
+    published: 'Apr 13, 2024',
+    updated: 'May 24, 2025'
+}
+
+        ],
+		// card for tab ten...
+        10: [
+            {
+    id: 'pawns_app',
+    number: '#01',
+    name: 'Pawns',
+    url: 'https://pawns.app',
+    blog: 'https://exe.io/loveormoon',
+    category: 'AI, Passive Income',
+    future: 'Passive earning via bandwidth sharing & surveys',
+    earn: 'Share internet and complete surveys for cash',
+    published: 'Jan 15, 2022',
+    updated: 'May 24, 2025'
+}
+
+        ]
+    };
+	
+    // ===== Load Cards =====
+	
+function loadCards(tabNumber = 1, page = 1) {
+    const cardGrid = document.getElementById('cardGrid');
+    cardGrid.innerHTML = '';
+
+    const cards = tabCards[tabNumber] || [];
+    const cardsPerPage = 100;
+    const startIndex = (page - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+    const pageCards = cards.slice(startIndex, endIndex);
+
+    pageCards.forEach(card => {
+        const cardDiv = document.createElement("div");
+        cardDiv.className = "card";
+        cardDiv.setAttribute('data-tab', tabNumber);
+
+        // Get stored love count or default to 0
+        const loves = parseInt(localStorage.getItem(`${card.id}-loves`) || "0");
+        const hasLoved = localStorage.getItem(`${card.id}-hasLoved`) === "true";
+
+        cardDiv.innerHTML = `
+            <span class="free-text">Free</span>
+            <div class="top-meta">
+                <button id="loveBtn-${card.id}" aria-pressed="${hasLoved}">🍓 <span id="loveCount-${card.id}">${loves}</span></button>
+                <span class="card-number">${card.number}</span>
+            </div>
+            <a href="${card.url}" target="_blank" class="title" id="titleLink-${card.id}">${card.name}</a>
+            <div class="info-list">
+                <strong>✅ Website Name:</strong> ${card.name}<br>
+                <strong>🍀 Category:</strong> ${card.category}<br>
+                <strong>☄️ Future:</strong> ${card.future}<br>
+                <strong>💸 Earn Method:</strong> ${card.earn}<br>
+            </div>
+            <div class="meta">📅 Published: ${card.published} | Updated: ${card.updated}</div>
+            <a href="${card.blog}" target="_blank" class="learn-more-btn" title="Prove You're Not a Robot!">💶 Make Money_</a>
+            <button class="share-btn" id="shareBtn-${card.id}">✈️ Share</button>
+        `;
+
+        cardGrid.appendChild(cardDiv);
+
+        // 🧠 Ensure the events are attached after DOM insertion
+        setupCardEvents(card);
+    });
+
+// ✅ Smooth scroll to top of tabs when pagination is clicked
+if (cardGrid) {
+    window.requestAnimationFrame(() => {
+        const header = document.querySelector('header'); // Adjust selector to your header element
+        const tabsSection = document.querySelector('.tabs-container'); // The target section
+        
+        if (tabsSection) {
+            // Get the top position of the tabs section relative to the document
+            const tabsTop = tabsSection.getBoundingClientRect().top + window.scrollY;
+
+            // Get the height of the header if it's sticky (adjust based on your actual header height)
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            // Scroll to the header first (if needed) and then to the tabs section
+            window.scrollTo({
+                top: tabsTop - headerHeight - 20, // Account for the header height
+                behavior: 'smooth'
+            });
+        }
+    });
+  }
+}
+
+	// ===== Setup Card Events =====
+
+function setupCardEvents(card) {
+    // ❤️ LOVE BUTTON
+    const loveBtn = document.getElementById(`loveBtn-${card.id}`);
+    const loveCount = document.getElementById(`loveCount-${card.id}`);
+
+    if (loveBtn && loveCount) {
+        loveBtn.onclick = function () {
+            let isLoved = loveBtn.getAttribute('aria-pressed') === 'true';
+            let count = parseInt(loveCount.textContent || "0");
+
+            if (isLoved) {
+                count--;
+                loveBtn.setAttribute('aria-pressed', 'false');
+                localStorage.setItem(`${card.id}-hasLoved`, 'false');
+            } else {
+                count++;
+                loveBtn.setAttribute('aria-pressed', 'true');
+                localStorage.setItem(`${card.id}-hasLoved`, 'true');
+            }
+
+            loveCount.textContent = count;
+            localStorage.setItem(`${card.id}-loves`, count);
+        };
+    } else {
+        console.warn(`❌ Love button or count not found for card.id=${card.id}`);
+    }
+
+    // ✈️ SHARE BUTTON
+const shareBtn = document.getElementById(`shareBtn-${card.id}`);
+
+if (shareBtn) {
+    shareBtn.onclick = function () {
+        if (navigator.share) {
+            navigator.share({
+                title: card.name,
+                text: `Check out ${card.name}: ${card.future}`,
+                url: card.url
+            }).catch((error) => console.log('Error sharing:', error));
+        } else {
+            navigator.clipboard.writeText(card.url)
+                .then(() => {
+                    shareBtn.textContent = '✅ Copied!';
+                    shareBtn.disabled = true;
+                    setTimeout(() => {
+                        shareBtn.textContent = '✈️ Share'; // Always go back to clean label
+                        shareBtn.disabled = false;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert(`Share this link: ${card.url}`);
+                });
+        }
+    };
+ }
+
+}
+
+    // ===== Tab Switching =====
+	
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab');
+    
+    // Pre-calculate and cache heights of each tab's content if possible
+    const tabContentHeights = {};
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabNumber = tab.getAttribute('data-tab');
+            
+            // Capture current scroll position before tab switch
+            const scrollPosition = window.scrollY;
+            
+            // Store current grid height to maintain during transition
+            const cardGrid = document.getElementById('cardGrid');
+            const currentHeight = cardGrid.offsetHeight;
+            if (currentHeight > 0) {
+                cardGrid.style.height = `${currentHeight}px`;
+            }
+            
+            // Update active tab
+            document.querySelector('.tab.active').classList.remove('active');
+            tab.classList.add('active');
+            
+            // Update the tab message
+            updateTabMessage(tabNumber);
+            
+            // Load cards for this tab (starting with page 1)
+            loadCards(parseInt(tabNumber), 1);
+            
+            // Reset pagination to page 1
+            document.querySelector('.page-button.active').classList.remove('active');
+            document.querySelectorAll('.page-button:not(.nav-button)')[0].classList.add('active');
+            
+            // After content loads, smoothly transition to new height
+            requestAnimationFrame(() => {
+                // Restore scroll position to prevent jumps
+                window.scrollTo(0, scrollPosition);
+                // Allow natural height after content loads
+                setTimeout(() => {
+                    cardGrid.style.height = '';
+                }, 50);
+            });
+        });
+    });
+});
+
+    // ===== Pagination =====
+	
+    document.addEventListener('DOMContentLoaded', function() {
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const pageButtons = document.querySelectorAll('.page-button:not(.nav-button)');
+        
+        let currentPage = 1;
+        let currentTab = 1;
+        
+        // Previous button click
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updateActivePage();
+                loadCards(currentTab, currentPage);
+            }
+        });
+        
+        // Next button click
+        nextButton.addEventListener('click', () => {
+            if (currentPage < pageButtons.length) {
+                currentPage++;
+                updateActivePage();
+                loadCards(currentTab, currentPage);
+            }
+        });
+        
+        // Page button clicks
+        pageButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                currentPage = index + 1;
+                updateActivePage();
+                loadCards(currentTab, currentPage);
+            });
+        });
+        
+        // Update active page indicator
+        function updateActivePage() {
+            document.querySelector('.page-button.active').classList.remove('active');
+            pageButtons[currentPage - 1].classList.add('active');
+        }
+        
+        // Track tab changes
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                currentTab = parseInt(tab.getAttribute('data-tab'));
+                currentPage = 1; // Reset to first page when changing tabs
+            });
+        });
+    });
+
+    // ===== Initial Load =====
+    document.addEventListener('DOMContentLoaded', function() {
+        loadCards(1, 1);
+    });
+	
+	function renderPagination(tabNumber) {
+    const paginationContainer = document.querySelector('.pagination');
+    if (!paginationContainer) return;
+
+    paginationContainer.innerHTML = ''; // Clear old buttons
+
+    const cards = tabCards[tabNumber] || [];
+    const cardsPerPage = 100;
+    const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'page-button' + (i === 1 ? ' active' : '');
+        btn.dataset.page = i;
+        btn.textContent = i;
+        paginationContainer.appendChild(btn);
+    }
+
+    // Add page click events
+    paginationContainer.querySelectorAll('.page-button').forEach(button => {
+        button.addEventListener('click', e => {
+            const newPage = parseInt(button.dataset.page, 10);
+            if (!isNaN(newPage)) {
+                currentPage = newPage;
+                loadCards(tabNumber, newPage);
+
+                // Update active button
+                paginationContainer.querySelectorAll('.page-button').forEach(b => b.classList.remove('active'));
+                button.classList.add('active');
+            }
+        });
+    });
+}
+
+			// ===== Moon-Wrapper Function =====
+
+function breakMoon() {
+      const moon = document.getElementById('moon');
+      moon.classList.remove('broken'); // Reset animation
+      void moon.offsetWidth; // Reflow
+      moon.classList.add('broken');
+
+      // Open link after animation completes
+      setTimeout(() => {
+        window.open('https://tpi.li/qenYlDzh3v', '_blank');
+      }, 3000);
+    }
+
+
+			// ===== Heart-Wrapper Function =====
+
+
+  function breakHeart(wrapper) {
+    const heart = wrapper.querySelector('.heart');
+    const bandage = wrapper.querySelector('.bandage');
+
+    // Reset heart animation
+    heart.classList.remove('broken');
+    void heart.offsetWidth;
+    heart.classList.add('broken');
+
+    // Fade out bandage
+    bandage.style.transition = 'opacity 3s ease-in-out';
+    bandage.style.opacity = '0';
+
+    // Add broken class to the wrapper (fixes the red glow issue)
+    wrapper.classList.add('broken');
+
+    // Open link after delay
+    setTimeout(() => {
+      window.open('https://tpi.li/qenYlDzh3v', '_blank');
+    }, 3000);
+  }
+
+
+
+			// ===== Eggs Function =====
+	
+function popEgg(el, id) {
+    // Add the "pop" class to the element to trigger animation or effect
+    el.classList.add('pop');
+
+
+
+    // Array of random links to open
+    const randomLinks = [
+        'https://loveormoon.com/openai.html',
+        'https://otieu.com/4/6881165',
+        'https://otieu.com/4/7274272',
+        'https://otieu.com/4/7274279',
+		'https://loveormoon.com/otherprompt.html',
+        'https://otieu.com/4/7274287',
+		'https://otieu.com/4/7274252',
+		'https://otieu.com/4/7229827',
+		'https://otieu.com/4/7274256',
+		'https://loveormoon.com/prompt.html',
+		'https://otieu.com/4/7243434',
+		'https://otieu.com/4/7274254',
+		'https://otieu.com/4/7229824',
+		'https://otieu.com/4/7274284',
+		'https://loveormoon.com/lovabledevprompt.html',
+		'https://otieu.com/4/7278628',
+		'https://otieu.com/4/7274280',
+		'https://otieu.com/4/7274291',
+		'https://otieu.com/4/7274273',
+		'https://loveormoon.com/grokprompt.html',
+		'https://otieu.com/4/7274294',
+		'https://otieu.com/4/7274274',
+		'https://otieu.com/4/6860849',
+		'https://otieu.com/4/7229829',
+		'https://loveormoon.com/promptbonus.html',
+		'https://otieu.com/4/7274271',
+		'https://tpi.li/WRPcLt7Pet7',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/claudeai.html',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/bolt_page.html',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/stitch_page.html',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'https://loveormoon.com/',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		''
+		
+    ];
+
+    // Randomly pick a link from the array
+    const randomLink = randomLinks[Math.floor(Math.random() * randomLinks.length)];
+
+    // Set a timeout for animation effect
+    setTimeout(() => {
+        // Open the randomly selected link in a new tab
+        window.open(randomLink, '_blank');
+        // Remove the element after the animation
+        el.remove();
+    }, 400);
+}
+	
+	  document.addEventListener("DOMContentLoaded", function () {
+    const eggs = document.querySelectorAll(".egg");
+
+    eggs.forEach(egg => {
+      egg.addEventListener("click", function () {
+        egg.classList.add("pop"); // play animation
+        setTimeout(() => {
+          egg.style.display = "none"; // hide after animation
+        }, 400); // match .pop animation duration
+      });
+    });
+  });
+
+// ===== Scroll Button =====
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// Avoid layout thrashing by using passive listener for scroll
+window.addEventListener("scroll", () => {
+  const isVisible = window.scrollY > 300;
+  if (scrollBtn.style.display !== (isVisible ? "flex" : "none")) {
+    scrollBtn.classList.toggle('visible', isVisible);
+  }
+}, { passive: true });  // Passive = no layout blocking
+
+// INP-optimized scroll to top (no layout jump, smooth UX)
+scrollBtn.addEventListener("click", () => {
+  if (document.documentElement.scrollTop || document.body.scrollTop) {
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+}, { passive: true });  // Passive click = non-blocking
+
+document.getElementById('year').textContent = new Date().getFullYear();
+// CORE WEB VITALS MONITORING
+// Add to your site to measure real performance
+const reportWebVitals = ({ name, delta, id }) => {
+  // Send CLS, LCP, FID metrics to your analytics
+  console.log(`Metric: ${name} ID: ${id} Value: ${delta}`);
+  // Replace with actual analytics call
+};
+
+// Initialize monitoring
+new PerformanceObserver((entryList) => {
+  entryList.getEntries().forEach((entry) => {
+    // Focus on capturing CLS events
+    if (entry.entryType === 'layout-shift' && !entry.hadRecentInput) {
+      reportWebVitals({
+        name: 'CLS',
+        delta: entry.value,
+        id: entry.id
+      });
+    }
+  });
+}).observe({ type: 'layout-shift', buffered: true });
+
+
+		// ===== Cookie Function =====
+
+// Cookie function start now
+document.addEventListener('DOMContentLoaded', function () {
+    const hasConsent = localStorage.getItem('cookieConsent');
+    const cookieBar = document.getElementById('cookieBar');
+    const cookiePreferences = document.getElementById('cookiePreferences');
+    const savedPreferences = JSON.parse(localStorage.getItem('cookiePreferences') || '{"analytics": false, "marketing": false}');
+
+    if (hasConsent === 'true' || hasConsent === 'custom') {
+        cookieBar.classList.add('hidden');
+        applyCookiePreferences(savedPreferences);
+    }
+
+    document.getElementById('analyticsCookies').checked = savedPreferences.analytics;
+    document.getElementById('marketingCookies').checked = savedPreferences.marketing;
+
+    document.getElementById('acceptCookies').addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', 'true');
+        const preferences = { analytics: true, marketing: true };
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        cookieBar.classList.add('hidden');
+        applyCookiePreferences(preferences);
+    });
+
+    document.getElementById('rejectCookies').addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', 'false');
+        const preferences = { analytics: false, marketing: false };
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        cookieBar.classList.add('hidden');
+        applyCookiePreferences(preferences);
+    });
+
+    document.getElementById('showPreferences').addEventListener('click', function () {
+        cookiePreferences.classList.add('visible');
+    });
+
+    document.getElementById('closePreferences').addEventListener('click', function () {
+        cookiePreferences.classList.remove('visible');
+    });
+
+    document.getElementById('savePreferences').addEventListener('click', function () {
+        const preferences = {
+            analytics: document.getElementById('analyticsCookies').checked,
+            marketing: document.getElementById('marketingCookies').checked
+        };
+        localStorage.setItem('cookieConsent', 'custom');
+        localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
+        cookieBar.classList.add('hidden');
+        cookiePreferences.classList.remove('visible');
+        applyCookiePreferences(preferences);
+    });
+
+document.getElementById('learnMoreLink').addEventListener('click', function (e) {
+    e.preventDefault();
+    alert('This would open your Learn More page about cookies.');
+    window.open(this.href, '_blank');  // open the link in a new tab
+});
+
+document.getElementById('privacyPolicyLink').addEventListener('click', function (e) {
+    e.preventDefault();
+    alert('This would open your Privacy Policy page.');
+    window.open(this.href, '_blank');  // open the link in a new tab
+});
+
+
+    function applyCookiePreferences(preferences) {
+        console.log('Applied cookie preferences:', preferences);
+
+        if (preferences.analytics) {
+            console.log('Analytics cookies enabled');
+            // Enable analytics (e.g., load Google Analytics)
+        } else {
+            console.log('Analytics cookies disabled');
+            // Disable analytics
+        }
+
+        if (preferences.marketing) {
+            console.log('Marketing cookies enabled');
+            // Enable marketing scripts
+        } else {
+            console.log('Marketing cookies disabled');
+            // Disable marketing
+        }
+    }
+
+    window.addEventListener('click', function (e) {
+        if (e.target === cookiePreferences) {
+            cookiePreferences.classList.remove('visible');
+        }
+    });
+
+    // Footer margin adjustment
+    const footer = document.querySelector('footer');
+    if (footer && cookieBar) {
+        function adjustFooterMargin() {
+            if (window.innerHeight < 600) {
+                const cookieBarHeight = cookieBar.offsetHeight;
+                footer.style.marginBottom = cookieBarHeight + 'px';
+            } else {
+                footer.style.marginBottom = '0';
+            }
+        }
+
+        adjustFooterMargin();
+        let resizeTimeout;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(adjustFooterMargin, 100);
+        });
+    }
+});
+
+
+
+</script>
+
+
+
+<!-- Ad Slot 1 (Slim Vertical) 
+<div class="ad-slot" style="min-height: 600px; width: 160px; background: #f5f5f5; margin: 20px auto; display: flex; justify-content: center; align-items: center; border: 1px dashed #ccc;">
+    Ad Space (e.g., 160x600) 
+</div> -->
 </body>
 </html>
